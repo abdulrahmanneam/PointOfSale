@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4EA88204-56DA-43C5-88D1-9E5D47824EB1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PointOfSale</RootNamespace>
+    <AssemblyName>PointOfSale</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.78\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.Contrib.2.0.78\lib\net461\Dapper.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Persistent.Base.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\CLS_activation.cs" />
+    <Compile Include="BL\ClS_Customers.cs" />
+    <Compile Include="BL\ClS_LOGIN.cs" />
+    <Compile Include="BL\ClS_Order.cs" />
+    <Compile Include="BL\CLS_PRODUCTS.cs" />
+    <Compile Include="DAL\DATAACCESSLAYER.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Activ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Activ.Designer.cs">
+      <DependentUpon>Activ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Add_Pro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Add_Pro.Designer.cs">
+      <DependentUpon>Add_Pro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Add_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Add_user.Designer.cs">
+      <DependentUpon>Add_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\CAT_Pro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\CAT_Pro.Designer.cs">
+      <DependentUpon>CAT_Pro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Cust_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Cust_List.Designer.cs">
+      <DependentUpon>Cust_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\cus_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\cus_List.Designer.cs">
+      <DependentUpon>cus_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\cut_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\cut_List.Designer.cs">
+      <DependentUpon>cut_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Image_Viwe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Image_Viwe.Designer.cs">
+      <DependentUpon>Image_Viwe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\invo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\invo.Designer.cs">
+      <DependentUpon>invo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Invoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Invoi.Designer.cs">
+      <DependentUpon>Invoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Pro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Pro.Designer.cs">
+      <DependentUpon>Pro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Product_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Product_List.Designer.cs">
+      <DependentUpon>Product_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\reportsales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\reportsales.Designer.cs">
+      <DependentUpon>reportsales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Users_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Users_List.Designer.cs">
+      <DependentUpon>Users_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportL\CAT_Pro.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAT_Pro.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportL\Report_Pro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportL\Report_Pro.Designer.cs">
+      <DependentUpon>Report_Pro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportL\rpt_Orders.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_Orders.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportL\rpy_Pro.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpy_Pro.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportL\rp_ProList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rp_ProList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportL\ry_GSG.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ry_GSG.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Activ.resx">
+      <DependentUpon>Activ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Add_Pro.resx">
+      <DependentUpon>Add_Pro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Add_user.resx">
+      <DependentUpon>Add_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\CAT_Pro.resx">
+      <DependentUpon>CAT_Pro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Cust_List.resx">
+      <DependentUpon>Cust_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\cus_List.resx">
+      <DependentUpon>cus_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\cut_List.resx">
+      <DependentUpon>cut_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Image_Viwe.resx">
+      <DependentUpon>Image_Viwe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\invo.resx">
+      <DependentUpon>invo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Invoi.resx">
+      <DependentUpon>Invoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Pro.resx">
+      <DependentUpon>Pro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Product_List.resx">
+      <DependentUpon>Product_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\reportsales.resx">
+      <DependentUpon>reportsales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Users_List.resx">
+      <DependentUpon>Users_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportL\CAT_Pro.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CAT_Pro.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportL\Report_Pro.resx">
+      <DependentUpon>Report_Pro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportL\rpt_Orders.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_Orders.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportL\rpy_Pro.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpy_Pro.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportL\rp_ProList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rp_ProList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportL\ry_GSG.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ry_GSG.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STM-1000LID.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_72363.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tour_security_transparentBG-7e0e6115.png" />
+    <None Include="Resources\08d909fc-707e-4c83-827c-2ca9c1ed04a7.png" />
+    <None Include="Resources\sign-button-icon-isometric-style-sign-button-icon-isometric-sign-button-vector-icon-web-design-isolated-white-129573939.jpg" />
+    <None Include="Resources\maximum-security-icon.png" />
+    <None Include="Resources\R %281%29.png" />
+    <None Include="Resources\img_356582.png" />
+    <None Include="Resources\tour_security_transparentBG-7e0e61151.png" />
+    <None Include="Resources\R.png" />
+    <None Include="Resources\R %286%29.png" />
+    <None Include="Resources\authorize.png" />
+    <None Include="Resources\R %2815%29.png" />
+    <None Include="Resources\R1.png" />
+    <None Include="Resources\admin-login-icon-3.png" />
+    <None Include="Resources\R %2814%29.png" />
+    <None Include="Resources\admin-login-icon-31.png" />
+    <None Include="Resources\R %2815%291.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
